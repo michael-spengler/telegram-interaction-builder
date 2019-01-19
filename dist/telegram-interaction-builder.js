@@ -18,11 +18,11 @@ class TelegramInteractionBuilder {
         return this.teleBot.getMe();
     }
     async handleText(msg) {
-        const telegramResponse = this.responseProvider.getResponse(msg.from.id, msg.text);
+        const telegramResponse = await this.responseProvider.getResponse(msg.from.id, msg.text);
         await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(), this.addTelegramButtons(telegramResponse.getActions()));
     }
     async handleCallBackQuery(msg) {
-        const telegramResponse = this.responseProvider.getResponse(msg.from.id, msg.text);
+        const telegramResponse = await this.responseProvider.getResponse(msg.from.id, msg.text);
         await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(), this.addTelegramButtons(telegramResponse.getActions()));
     }
     getBotParameters() {

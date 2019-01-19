@@ -5,4 +5,4 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./telegram-interaction-builder"));
 __export(require("./telegram-response"));
-__export(require("./telegram-response-provider"));
+__export(require("./default-response-provider"));

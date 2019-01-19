@@ -1,4 +1,4 @@
-import { IResponseProvider } from "./telegram-response-provider";
+import { IResponseProvider } from "./types";
 export declare class TelegramInteractionBuilder {
     private static teleBotModule;
     private teleBot;
