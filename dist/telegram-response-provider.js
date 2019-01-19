@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const telegram_response_1 = require("./telegram-response");
-class ResponseProvider {
+class DefaultResponseProvider {
     getResponse(target, input) {
         switch (input) {
             case "/start": {
@@ -15,4 +15,4 @@ class ResponseProvider {
         return this.telegramResponse;
     }
 }
-exports.ResponseProvider = ResponseProvider;
+exports.DefaultResponseProvider = DefaultResponseProvider;

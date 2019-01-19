@@ -1,6 +1,6 @@
 {
   "name": "telegram-interaction-builder",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "As simple as it gets",
   "main": "./dist/index.js",
   "typings": "./dist/index.js",

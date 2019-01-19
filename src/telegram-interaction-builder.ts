@@ -1,7 +1,7 @@
 import { ConfigurationReader } from "configuration-reader"
 import * as path from "path"
 import { triggeringEvents, TelegramResponse } from "./telegram-response";
-import { ResponseProvider, IResponseProvider } from "./telegram-response-provider";
+import { DefaultResponseProvider, IResponseProvider } from "./telegram-response-provider";
 
 export class TelegramInteractionBuilder {
     private static teleBotModule: any = require("telebot")
@@ -19,7 +19,7 @@ export class TelegramInteractionBuilder {
         this.teleBot.on(triggeringEvents.callbackQuery, async (msg: any) => this.handleCallBackQuery(msg))
     }
 
-    public start(): void {
+    public startListening(): void {
         this.teleBot.start()
     }
 

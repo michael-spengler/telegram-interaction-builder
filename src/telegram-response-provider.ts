@@ -3,7 +3,7 @@ export interface IResponseProvider {
     getResponse(target: string, input: string): TelegramResponse
 }
 
-export class ResponseProvider implements IResponseProvider {
+export class DefaultResponseProvider implements IResponseProvider {
 
     private telegramResponse: TelegramResponse | undefined
 

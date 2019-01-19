@@ -6,7 +6,7 @@ let telegramInteractionBuilder;
 describe("Processor", () => {
     beforeEach(async () => {
         telegramInteractionBuilder =
-            new telegram_interaction_builder_1.TelegramInteractionBuilder("../.env", new telegram_response_provider_1.ResponseProvider());
+            new telegram_interaction_builder_1.TelegramInteractionBuilder("../.env", new telegram_response_provider_1.DefaultResponseProvider());
     });
     it("make sure the Telegram Bot is up and running", async () => {
         expect(await telegramInteractionBuilder.getBotData())

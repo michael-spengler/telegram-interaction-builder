@@ -1,12 +1,12 @@
 import { TelegramInteractionBuilder } from "./telegram-interaction-builder";
-import { ResponseProvider } from "./telegram-response-provider";
+import { DefaultResponseProvider } from "./telegram-response-provider";
 
 let telegramInteractionBuilder: TelegramInteractionBuilder
 
 describe("Processor", () => {
     beforeEach(async () => {
         telegramInteractionBuilder =
-            new TelegramInteractionBuilder("../.env", new ResponseProvider())
+            new TelegramInteractionBuilder("../.env", new DefaultResponseProvider())
     })
 
     it("make sure the Telegram Bot is up and running", async () => {
