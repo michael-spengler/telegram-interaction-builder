@@ -1,14 +1,12 @@
 # Telegram Interaction Builder
 As simple as it gets
 
-# Usage Example
-
 ## Preparation
 1. Create a config file named .env in your project folder
 2. Add an entry in your config file like: **BOT_TOKEN=123**.
 3. Make sure to keep your BOT_TOKEN secret e.g. by adding your config file name (.env) to .gitignore.  
 
-## Actual Usage
+## Usage Example
     import { TelegramInteractionBuilder, DefaultResponseProvider } 
         from "telegram-interaction-builder"
 
@@ -23,5 +21,10 @@ As simple as it gets
 
     interactionBuilder.startListening()
 
-# Feedback
+
+## Feedback
 If you find any issues or want to share improvement proposals in general feel free to open an issue [here](https://github.com/michael-spengler/telegram-interaction-builder/issues).
+
+
+## Contribute
+I am interested in save and useful enhancements. Feel free to create [Pull Requests](https://github.com/michael-spengler/telegram-interaction-builder/pulls) on my Repository.

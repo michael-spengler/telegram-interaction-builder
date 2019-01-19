@@ -1,13 +1,11 @@
 import { TelegramResponse } from "./telegram-response";
-export interface IResponseProvider {
-    getResponse(target: string, input: string): TelegramResponse
-}
+import { IResponseProvider } from "./types";
 
 export class DefaultResponseProvider implements IResponseProvider {
 
     private telegramResponse: TelegramResponse | undefined
 
-    public getResponse(target: string, input: string): TelegramResponse {
+    public async getResponse(target: string, input: string): Promise<TelegramResponse> {
         switch (input) {
             case "/start": {
                 this.telegramResponse = new TelegramResponse(target, "Hi", ["Go", "Stop"])

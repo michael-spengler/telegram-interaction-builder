@@ -1,7 +1,7 @@
 import { ConfigurationReader } from "configuration-reader"
 import * as path from "path"
 import { triggeringEvents, TelegramResponse } from "./telegram-response";
-import { DefaultResponseProvider, IResponseProvider } from "./telegram-response-provider";
+import { IResponseProvider } from "./types";
 
 export class TelegramInteractionBuilder {
     private static teleBotModule: any = require("telebot")
@@ -28,12 +28,12 @@ export class TelegramInteractionBuilder {
     }
 
     private async handleText(msg: any): Promise<void> {
-        const telegramResponse: TelegramResponse = this.responseProvider.getResponse(msg.from.id, msg.text)
+        const telegramResponse: TelegramResponse = await this.responseProvider.getResponse(msg.from.id, msg.text)
         await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(), this.addTelegramButtons(telegramResponse.getActions()))
     }
 
     private async handleCallBackQuery(msg: any): Promise<void> {
-        const telegramResponse: TelegramResponse = this.responseProvider.getResponse(msg.from.id, msg.text)
+        const telegramResponse: TelegramResponse = await this.responseProvider.getResponse(msg.from.id, msg.text)
         await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(), this.addTelegramButtons(telegramResponse.getActions()))
     }
 

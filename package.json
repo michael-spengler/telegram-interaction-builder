@@ -1,6 +1,6 @@
 {
   "name": "telegram-interaction-builder",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "As simple as it gets",
   "main": "./dist/index.js",
   "typings": "./dist/index.js",
@@ -31,6 +31,7 @@
     "@types/node": "^10.12.18",
     "configuration-reader": "^1.0.6",
     "jest": "^23.6.0",
+    "nlp-with-actions": "^2.2.3",
     "path": "^0.12.7",
     "telebot": "^1.2.6",
     "ts-jest": "^23.10.5"
