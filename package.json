@@ -1,6 +1,6 @@
 {
   "name": "telegram-interaction-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "As simple as it gets",
   "main": "./dist/index.js",
   "typings": "./dist/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "tbd"
+    "url": "https://github.com/michael-spengler/telegram-interaction-builder"
   },
   "keywords": [
     "Telegram",
