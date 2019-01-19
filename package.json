@@ -1,0 +1,43 @@
+{
+  "name": "telegram-interaction-builder",
+  "version": "1.0.0",
+  "description": "As simple as it gets",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "keywords": [
+    "Telegram",
+    "Interaction",
+    "Builder",
+    "Chatbot",
+    "DigitalAssistant",
+    "Digiassistang"
+  ],
+  "author": "Michael Spengler",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tslint && npm run test"
+    }
+  },
+  "dependencies": {
+    "@types/jest": "^21.0.0",
+    "@types/node": "^10.12.18",
+    "configuration-reader": "^1.0.6",
+    "jest": "^23.6.0",
+    "path": "^0.12.7",
+    "telebot": "^1.2.6",
+    "ts-jest": "^23.10.5"
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  }
+}
