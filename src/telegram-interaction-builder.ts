@@ -1,13 +1,15 @@
 import { ConfigurationReader } from "configuration-reader"
 import * as path from "path"
-import { triggeringEvents, TelegramResponse } from "./telegram-response";
-import { IResponseProvider } from "./types";
+import { TelegramResponse, triggeringEvents } from "./telegram-response"
+import { IResponseProvider } from "./types"
 
 export class TelegramInteractionBuilder {
-    private static teleBotModule: any = require("telebot")
+    private static readonly teleBotModule: any =
+        // tslint:disable-next-line:no-require-imports
+        require("telebot")
 
-    private teleBot: any
-    private configurationReader: ConfigurationReader
+    private readonly teleBot: any
+    private readonly configurationReader: ConfigurationReader
     private responseProvider: IResponseProvider
 
     public constructor(relativePathToYourConfigFile: string, responseProvider: IResponseProvider) {
@@ -17,6 +19,10 @@ export class TelegramInteractionBuilder {
 
         this.teleBot.on(triggeringEvents.text, async (msg: any) => this.handleText(msg))
         this.teleBot.on(triggeringEvents.callbackQuery, async (msg: any) => this.handleCallBackQuery(msg))
+    }
+
+    public setResponseProvider(responseProvider: IResponseProvider): void {
+        this.responseProvider = responseProvider
     }
 
     public startListening(): void {
@@ -29,12 +35,14 @@ export class TelegramInteractionBuilder {
 
     private async handleText(msg: any): Promise<void> {
         const telegramResponse: TelegramResponse = await this.responseProvider.getResponse(msg.from.id, msg.text)
-        await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(), this.addTelegramButtons(telegramResponse.getActions()))
+        await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(),
+                                       this.addTelegramButtons(telegramResponse.getActions()))
     }
 
     private async handleCallBackQuery(msg: any): Promise<void> {
         const telegramResponse: TelegramResponse = await this.responseProvider.getResponse(msg.from.id, msg.text)
-        await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(), this.addTelegramButtons(telegramResponse.getActions()))
+        await this.teleBot.sendMessage(telegramResponse.getTarget(), telegramResponse.getText(),
+                                       this.addTelegramButtons(telegramResponse.getActions()))
     }
 
     private getBotParameters(): any {

@@ -1,11 +1,14 @@
 {
   "name": "telegram-interaction-builder",
-  "version": "1.0.9",
+  "version": "1.0.13",
   "description": "As simple as it gets",
   "main": "./dist/index.js",
   "typings": "./dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "tslint": "tslint -p ./",
+    "build-and-publish": "tsc && npm publish"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,8 @@ export enum triggeringEvents {
 }
 
 export class TelegramResponse {
-    public constructor(private target: string, private text: string, private actions: string[]) { }
+    public constructor(private readonly target: string, private readonly text: string,
+                       private readonly actions: string[]) { }
 
     public getTarget(): string {
         return this.target

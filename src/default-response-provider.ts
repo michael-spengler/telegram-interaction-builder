@@ -1,5 +1,5 @@
-import { TelegramResponse } from "./telegram-response";
-import { IResponseProvider } from "./types";
+import { TelegramResponse } from "./telegram-response"
+import { IResponseProvider } from "./types"
 
 export class DefaultResponseProvider implements IResponseProvider {
 

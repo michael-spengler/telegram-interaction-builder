@@ -1,5 +1,5 @@
-import { TelegramInteractionBuilder } from "./telegram-interaction-builder";
-import { DefaultResponseProvider } from "./default-response-provider";
+import { DefaultResponseProvider } from "./default-response-provider"
+import { TelegramInteractionBuilder } from "./telegram-interaction-builder"
 
 let telegramInteractionBuilder: TelegramInteractionBuilder
 
