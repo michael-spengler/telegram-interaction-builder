@@ -22,7 +22,10 @@ export class AdvancedResponseProvider implements IResponseProvider {
 
         const answer: IAnswer = await this.processor.process(input)
 
-        this.telegramResponse = new TelegramResponse(target, answer.text, answer.actions)
+        const text: string = (answer.text === undefined) ?
+            "I don't know what to say." : answer.text
+
+        this.telegramResponse = new TelegramResponse(target, text, answer.actions)
 
         return this.telegramResponse
     }
