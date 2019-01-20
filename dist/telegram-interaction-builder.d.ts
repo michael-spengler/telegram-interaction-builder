@@ -1,8 +1,8 @@
 import { IResponseProvider } from "./types";
 export declare class TelegramInteractionBuilder {
-    private static teleBotModule;
-    private teleBot;
-    private configurationReader;
+    private static readonly teleBotModule;
+    private readonly teleBot;
+    private readonly configurationReader;
     private responseProvider;
     constructor(relativePathToYourConfigFile: string, responseProvider: IResponseProvider);
     setResponseProvider(responseProvider: IResponseProvider): void;

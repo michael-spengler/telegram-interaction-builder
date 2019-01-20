@@ -2,7 +2,9 @@ import { TelegramResponse } from "./telegram-response";
 import { IResponseProvider } from "./types";
 export declare class AdvancedResponseProvider implements IResponseProvider {
     private telegramResponse;
-    private processor;
+    private readonly processor;
+    private readonly nlpTrainer;
+    constructor();
     learn(): Promise<void>;
     getResponse(target: string, input: string): Promise<TelegramResponse>;
 }

@@ -47,5 +47,7 @@ class TelegramInteractionBuilder {
         };
     }
 }
-TelegramInteractionBuilder.teleBotModule = require("telebot");
+TelegramInteractionBuilder.teleBotModule = 
+// tslint:disable-next-line:no-require-imports
+require("telebot");
 exports.TelegramInteractionBuilder = TelegramInteractionBuilder;
