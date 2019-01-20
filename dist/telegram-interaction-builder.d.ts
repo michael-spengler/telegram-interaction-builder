@@ -8,8 +8,8 @@ export declare class TelegramInteractionBuilder {
     setResponseProvider(responseProvider: IResponseProvider): void;
     startListening(): void;
     getBotData(): Promise<any>;
-    private handleText(msg);
-    private handleCallBackQuery(msg);
-    private getBotParameters();
-    private addTelegramButtons(actions);
+    private handleText;
+    private handleCallBackQuery;
+    private getBotParameters;
+    private addTelegramButtons;
 }

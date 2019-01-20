@@ -1,6 +1,6 @@
 {
   "name": "telegram-interaction-builder",
-  "version": "1.0.14",
+  "version": "1.0.19",
   "description": "As simple as it gets",
   "main": "./dist/index.js",
   "typings": "./dist/index.js",
@@ -8,7 +8,7 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "tslint": "tslint -p ./",
-    "build-and-publish": "tsc && npm publish"
+    "bp": "tsc && npm publish"
   },
   "repository": {
     "type": "git",
@@ -34,8 +34,8 @@
     "@types/node": "^10.12.18",
     "configuration-reader": "^1.0.6",
     "jest": "^23.6.0",
-    "nlp-trainer": "~1.0.2",
-    "nlp-with-actions": "~3.0.0",
+    "nlp-trainer": "^2.0.1",
+    "nlp-with-actions": "^3.0.2",
     "path": "^0.12.7",
     "telebot": "^1.2.6",
     "ts-jest": "^23.10.5"

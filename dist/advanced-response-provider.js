@@ -9,10 +9,12 @@ class AdvancedResponseProvider {
         this.nlpTrainer = new nlp_trainer_1.NLPTrainer();
     }
     async learn() {
-        await this.processor.learn(this.nlpTrainer.getTrainingMap("exampleMap"));
+        await this.processor.learn(await this.nlpTrainer.getIntents("exampleMap"));
     }
     async getResponse(target, input) {
+        console.log(`processing input: ${input}`);
         const answer = await this.processor.process(input);
+        console.log(`processing answer: ${answer}`);
         this.telegramResponse = new telegram_response_1.TelegramResponse(target, answer.text, answer.actions);
         return this.telegramResponse;
     }

@@ -15,7 +15,7 @@ export class AdvancedResponseProvider implements IResponseProvider {
     }
 
     public async learn(): Promise<void> {
-        await this.processor.learn(this.nlpTrainer.getTrainingMap("exampleMap") as IIntent[])
+        await this.processor.learn(await this.nlpTrainer.getIntents("exampleMap") as IIntent[])
     }
 
     public async getResponse(target: string, input: string): Promise<TelegramResponse> {

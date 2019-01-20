@@ -1,7 +1,7 @@
 export declare enum triggeringEvents {
     text = "text",
     callbackQuery = "callbackQuery",
-    wildCard = "*",
+    wildCard = "*"
 }
 export declare class TelegramResponse {
     private readonly target;
