@@ -3,7 +3,7 @@ import { TelegramInteractionBuilder } from "./telegram-interaction-builder"
 
 let telegramInteractionBuilder: TelegramInteractionBuilder
 
-describe("Processor", () => {
+describe("TelegramInteractionBuilder", () => {
     beforeEach(async () => {
         telegramInteractionBuilder =
             new TelegramInteractionBuilder("../.env", new DefaultResponseProvider())

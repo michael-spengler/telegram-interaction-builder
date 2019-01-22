@@ -12,10 +12,10 @@ class AdvancedResponseProvider {
         await this.processor.learn(await this.nlpTrainer.getIntents("exampleMap"));
     }
     async getResponse(target, input) {
-        console.log(`processing input: ${input}`);
         const answer = await this.processor.process(input);
-        console.log(`processing answer: ${answer}`);
-        this.telegramResponse = new telegram_response_1.TelegramResponse(target, answer.text, answer.actions);
+        const text = (answer.text === undefined) ?
+            "I don't know what to say." : answer.text;
+        this.telegramResponse = new telegram_response_1.TelegramResponse(target, text, answer.actions);
         return this.telegramResponse;
     }
 }

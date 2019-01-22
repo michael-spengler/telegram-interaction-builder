@@ -15,4 +15,12 @@ describe("Processor", () => {
             target: "target", text: "hey man",
         });
     });
+    it("make sure the Telegram Bot is up and running", async () => {
+        await advancedResponseProvider.learn();
+        expect(await advancedResponseProvider.getResponse("target", "by"))
+            .toEqual({
+            actions: [],
+            target: "target", text: "I don't know what to say.",
+        });
+    });
 });
