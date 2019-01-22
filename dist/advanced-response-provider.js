@@ -8,8 +8,8 @@ class AdvancedResponseProvider {
         this.processor = new nlp_with_actions_1.Processor();
         this.nlpTrainer = new nlp_trainer_1.NLPTrainer();
     }
-    async learn() {
-        await this.processor.learn(await this.nlpTrainer.getIntents("exampleMap"));
+    async learn(trainingDataID) {
+        await this.processor.learn(await this.nlpTrainer.getIntents(trainingDataID));
     }
     async getResponse(target, input) {
         const answer = await this.processor.process(input);

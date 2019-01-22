@@ -5,6 +5,6 @@ export declare class AdvancedResponseProvider implements IResponseProvider {
     private readonly processor;
     private readonly nlpTrainer;
     constructor();
-    learn(): Promise<void>;
+    learn(trainingDataID: string): Promise<void>;
     getResponse(target: string, input: string): Promise<TelegramResponse>;
 }

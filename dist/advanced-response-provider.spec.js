@@ -2,21 +2,20 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const advanced_response_provider_1 = require("./advanced-response-provider");
 let advancedResponseProvider;
-describe("Processor", () => {
+describe("AdvancedResponseProvider", () => {
     beforeEach(async () => {
-        advancedResponseProvider =
-            new advanced_response_provider_1.AdvancedResponseProvider();
+        advancedResponseProvider = new advanced_response_provider_1.AdvancedResponseProvider();
     });
-    it("make sure the Telegram Bot is up and running", async () => {
-        await advancedResponseProvider.learn();
+    it("process Hi - direct match", async () => {
+        await advancedResponseProvider.learn("exampleMap");
         expect(await advancedResponseProvider.getResponse("target", "Hi"))
             .toEqual({
             actions: ["thumbs up", "thumbs down"],
             target: "target", text: "hey man",
         });
     });
-    it("make sure the Telegram Bot is up and running", async () => {
-        await advancedResponseProvider.learn();
+    it("process by - expecting the default response", async () => {
+        await advancedResponseProvider.learn("exampleMap");
         expect(await advancedResponseProvider.getResponse("target", "by"))
             .toEqual({
             actions: [],
