@@ -1,10 +1,14 @@
 # Telegram Interaction Builder
 As simple as it gets  
 
+This package leverages e.g. the [nlp-with-actions](nlp-with-actions) package
+
+
 ## Preparation
 1. Create a config file named .env in your project folder
 2. Copy your bot token from the [Telegram BotFather](https://telegram.me/BotFather) to your config file like: **BOT_TOKEN=123**.
 3. Make sure to keep your BOT_TOKEN secret e.g. by adding your config file name (.env) to .gitignore.  
+
 
 ## Basic Usage
     import { TelegramInteractionBuilder, DefaultResponseProvider } 
@@ -20,6 +24,7 @@ As simple as it gets
         new TelegramInteractionBuilder(yourConfigFilePath, responseProvider)
 
     interactionBuilder.startListening()
+
 
 ## Advanced Usage
 Instead of using the DefaultResponseProvider you can leverage the power of the  
@@ -38,6 +43,10 @@ Instead of using the DefaultResponseProvider you can leverage the power of the
         new TelegramInteractionBuilder(yourConfigFilePath, advancedResponseProvider)
 
     interactionBuilder.startListening()
+
+
+## Example Repository Using this npm package
+You can find an example repository using this npm package [here](https://github.com/michael-spengler/telegram-chatbot-out-of-the-box)
 
 
 ## Feedback
