@@ -1,7 +1,7 @@
 # Telegram Interaction Builder
 As simple as it gets  
 
-This package leverages e.g. the [nlp-with-actions](nlp-with-actions) package
+This package leverages e.g. the [nlp-with-actions](https://www.npmjs.com/package/nlp-with-actions) package
 
 
 ## Preparation
