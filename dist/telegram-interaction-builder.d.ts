@@ -5,6 +5,7 @@ export declare class TelegramInteractionBuilder {
     private readonly configurationReader;
     private responseProvider;
     constructor(relativePathToYourConfigFile: string, responseProvider: IResponseProvider);
+    getNameOfResponseProvider(): string;
     setResponseProvider(responseProvider: IResponseProvider): void;
     startListening(): void;
     getBotData(): Promise<any>;

@@ -11,6 +11,9 @@ class TelegramInteractionBuilder {
         this.teleBot.on(telegram_response_1.triggeringEvents.text, async (msg) => this.handleText(msg));
         this.teleBot.on(telegram_response_1.triggeringEvents.callbackQuery, async (msg) => this.handleCallBackQuery(msg));
     }
+    getNameOfResponseProvider() {
+        return this.responseProvider.getName();
+    }
     setResponseProvider(responseProvider) {
         this.responseProvider = responseProvider;
     }

@@ -45,13 +45,13 @@ Instead of using the DefaultResponseProvider you can leverage the power of the
     interactionBuilder.startListening()
 
 
+## Executable Specifications
+Please check my executable specifications / documentation [here](https://github.com/michael-spengler/telegram-interaction-builder).
+
 ## Example Repository Using this npm package
 You can find an example repository using this npm package [here](https://github.com/michael-spengler/telegram-chatbot-out-of-the-box)
 
 
 ## Feedback
-If you find any issues or want to share improvement proposals in general feel free to open an issue [here](https://github.com/michael-spengler/telegram-interaction-builder/issues).
+If you find any issues or want to share improvement proposals in general feel free to open an issue or a pull request [here](https://github.com/michael-spengler/telegram-interaction-builder).
 
-
-## Contribute
-I am interested in save and useful enhancements. Feel free to create [Pull Requests](https://github.com/michael-spengler/telegram-interaction-builder/pulls) on my Repository.

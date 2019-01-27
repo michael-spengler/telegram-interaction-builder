@@ -1,5 +1,5 @@
 
-import { IIntent, NLPTrainer } from "nlp-trainer"
+import { NLPTrainer } from "nlp-trainer"
 import { IAnswer, Processor } from "nlp-with-actions"
 import { TelegramResponse } from "./telegram-response"
 import { IResponseProvider } from "./types"
@@ -14,8 +14,12 @@ export class AdvancedResponseProvider implements IResponseProvider {
         this.nlpTrainer = new NLPTrainer()
     }
 
+    public getName(): string {
+        return this.constructor.name
+    }
+
     public async learn(trainingDataID: string): Promise<void> {
-        await this.processor.learn(await this.nlpTrainer.getIntents(trainingDataID) as IIntent[])
+        await this.processor.learn(await this.nlpTrainer.getIntents(trainingDataID))
     }
 
     public async getResponse(target: string, input: string): Promise<TelegramResponse> {

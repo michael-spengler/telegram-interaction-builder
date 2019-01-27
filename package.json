@@ -1,6 +1,6 @@
 {
   "name": "telegram-interaction-builder",
-  "version": "1.2.1",
+  "version": "2.1.0",
   "description": "As simple as it gets",
   "main": "./dist/index.js",
   "typings": "./dist/index.js",
@@ -8,19 +8,19 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "tslint": "tslint -p ./",
-    "bp": "tsc && npm publish"
+    "bp": "rm -rf ./dist && rm -rf ./node_modules && npm i --save && npm run tslint && tsc && npm run test:cov && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/michael-spengler/telegram-interaction-builder"
   },
   "keywords": [
-    "Telegram",
-    "Interaction",
-    "Builder",
+    "Telegram Interaction Builder",
     "Chatbot",
     "DigitalAssistant",
-    "Digiassistang"
+    "Digiassistant",
+    "Natural Language Processing",
+    "Homo Digitalis"
   ],
   "author": "Michael Spengler",
   "license": "MIT",

@@ -21,6 +21,10 @@ export class TelegramInteractionBuilder {
         this.teleBot.on(triggeringEvents.callbackQuery, async (msg: any) => this.handleCallBackQuery(msg))
     }
 
+    public getNameOfResponseProvider(): string {
+        return this.responseProvider.getName()
+    }
+
     public setResponseProvider(responseProvider: IResponseProvider): void {
         this.responseProvider = responseProvider
     }

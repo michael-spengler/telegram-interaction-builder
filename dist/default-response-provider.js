@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const telegram_response_1 = require("./telegram-response");
 class DefaultResponseProvider {
+    getName() {
+        return this.constructor.name;
+    }
     async getResponse(target, input) {
         switch (input) {
             case "/start": {
